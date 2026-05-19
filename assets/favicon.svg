@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0d6e7a"/>
+  <!-- friendly "T" monogram with spark dot -->
+  <text x="16" y="22"
+        font-family="'Plus Jakarta Sans', sans-serif"
+        font-weight="800"
+        font-size="22"
+        text-anchor="middle"
+        fill="#fbb13c">T</text>
+  <!-- spark dot above T -->
+  <circle cx="22" cy="9" r="2.6" fill="#e8533e"/>
+  <circle cx="22" cy="9" r="1.2" fill="#fff"/>
+</svg>

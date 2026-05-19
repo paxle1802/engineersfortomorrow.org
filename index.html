@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineers For Tomorrow Outreach — Inspiring the Next Generation of Virgin Islands Engineers</title>
+  <meta name="description" content="Engineers For Tomorrow Outreach (EFTO) is a U.S. Virgin Islands 501(c)(3) nonprofit delivering free hands-on engineering workshops in robotics, circuits, solar cars, bridges and AI for students ages 8–13 across St. Thomas and St. Croix." />
+  <meta name="theme-color" content="#0d6e7a" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="canonical" href="https://engineersfortomorrow.org/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Engineers For Tomorrow Outreach — USVI" />
+  <meta property="og:description" content="Free hands-on STEM workshops empowering Virgin Islands youth since 2018." />
+  <meta property="og:url" content="https://engineersfortomorrow.org/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Engineers For Tomorrow Outreach",
+    "alternateName": "EFTO",
+    "url": "https://engineersfortomorrow.org/",
+    "logo": "https://engineersfortomorrow.org/assets/logo.svg",
+    "email": "gail.steele@engineersfortomorrow.org",
+    "telephone": "+1-340-643-1495",
+    "taxID": "66-0874579",
+    "foundingDate": "2018",
+    "address": {
+      "@type": "PostalAddress",
+      "postOfficeBoxNumber": "305814",
+      "addressLocality": "St. Thomas",
+      "addressRegion": "VI",
+      "postalCode": "00803",
+      "addressCountry": "US"
+    },
+    "areaServed": "U.S. Virgin Islands"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       Engineers For Tomorrow Outreach — engineersfortomorrow.org
+       Layout DNA: engineersoftomorrow.ca (multi-band friendly)
+       Palette: Caribbean Teal · Coral · Sun Yellow (USVI tropical)
+       ============================================================ */
+    :root {
+      --teal:        #0d6e7a;
+      --teal-deep:   #0a5158;
+      --teal-soft:   #d8eef0;
+      --coral:       #e8533e;
+      --coral-deep:  #c93b27;
+      --coral-soft:  #fdf0ec;
+      --yellow:      #fbb13c;
+      --yellow-deep: #e69612;
+      --yellow-soft: #fef5e2;
+      --sky:         #cae9ff;
+      --ink:         #1a2b3c;
+      --ink-soft:    #44566c;
+      --muted:       #6b7c8f;
+      --line:        #e6ecf2;
+      --bg:          #ffffff;
+      --bg-dark:     #1a1f24;
+      --radius:      14px;
+      --radius-lg:   24px;
+      --shadow-sm:   0 1px 3px rgba(13,110,122,.08), 0 6px 18px rgba(13,110,122,.06);
+      --shadow:      0 8px 28px rgba(26,43,60,.12);
+      --maxw:        1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 0.6em;
+    }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.06; }
+    h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); line-height: 1.15; }
+    h3 { font-size: 1.3rem; line-height: 1.3; }
+    h4 { font-size: 1.05rem; line-height: 1.3; }
+    p  { margin: 0 0 1.2em; color: var(--ink-soft); }
+    a  { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--coral); }
+    strong { color: var(--ink); font-weight: 700; }
+    em { color: var(--coral); font-style: italic; font-weight: 600; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .narrow   { max-width: 780px; margin-inline: auto; }
+
+    /* The signature eyebrow — coral uppercase tracked, like EOT */
+    .eyebrow {
+      display: block;
+      font-size: 0.85rem; font-weight: 700;
+      color: var(--coral);
+      letter-spacing: .22em; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .section.dark .eyebrow { color: var(--yellow); }
+    .text-center { text-align: center; }
+    .lead { font-size: 1.15rem; color: var(--ink-soft); }
+
+    /* ============== HEADER ============== */
+    header.site {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; height: 88px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { height: 64px; width: auto; }
+    nav.primary ul {
+      display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; align-items: center;
+    }
+    nav.primary a {
+      font-size: 0.97rem; font-weight: 500; color: var(--ink-soft);
+      transition: color .15s;
+    }
+    nav.primary a:hover { color: var(--coral); }
+    .social-icons {
+      display: flex; gap: 6px; align-items: center;
+    }
+    .social-icons a {
+      width: 28px; height: 28px; border-radius: 4px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 0.78rem; font-weight: 700;
+    }
+    .social-icons a.fb { background: #1877f2; }
+    .social-icons a.x  { background: #000; }
+    .social-icons a.ig { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); }
+    .social-icons a.yt { background: #ff0000; }
+    .social-icons a.li { background: #0a66c2; }
+    @media (max-width: 940px) {
+      nav.primary ul { display: none; }
+    }
+
+    /* ============== HERO ============== */
+    .hero {
+      position: relative;
+      min-height: 560px;
+      display: flex; align-items: center; justify-content: center;
+      background:
+        linear-gradient(180deg, rgba(13,110,122,.55) 0%, rgba(13,110,122,.75) 100%),
+        radial-gradient(800px 600px at 70% 30%, var(--yellow) 0%, transparent 60%),
+        radial-gradient(900px 700px at 20% 80%, var(--coral) 0%, transparent 65%),
+        linear-gradient(135deg, #0d6e7a 0%, #0a5158 100%);
+      overflow: hidden;
+      color: #fff;
+      padding: 80px 24px;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,.06) 1px, transparent 2px),
+        radial-gradient(circle at 85% 30%, rgba(255,255,255,.06) 1px, transparent 2px),
+        radial-gradient(circle at 50% 80%, rgba(255,255,255,.06) 1px, transparent 2px);
+      background-size: 80px 80px;
+      opacity: .8;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 920px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px; border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #fff;
+      font-weight: 600; font-size: 0.85rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); }
+    .hero h1 {
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
+    .hero h1 .script {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      color: var(--yellow);
+      font-size: 1.1em;
+      display: inline-block;
+      line-height: 1;
+    }
+    .hero-lead {
+      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+      color: rgba(255,255,255,.92);
+      max-width: 700px;
+      margin: 18px auto 36px;
+      line-height: 1.6;
+    }
+    .cta-row {
+      display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700; font-size: 1rem;
+      transition: all .18s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-coral {
+      background: var(--coral); color: #fff !important;
+      box-shadow: 0 6px 16px rgba(232,83,62,.35);
+    }
+    .btn-coral:hover { background: var(--coral-deep); transform: translateY(-1px); box-shadow: 0 8px 22px rgba(232,83,62,.5); color: #fff !important; }
+    .btn-teal {
+      background: var(--teal); color: #fff !important;
+    }
+    .btn-teal:hover { background: var(--teal-deep); color: #fff !important; }
+    .btn-yellow {
+      background: var(--yellow); color: var(--ink) !important;
+      box-shadow: 0 4px 12px rgba(251,177,60,.4);
+    }
+    .btn-yellow:hover { background: var(--yellow-deep); color: var(--ink) !important; }
+    .btn-outline {
+      background: transparent; color: #fff !important;
+      border: 2px solid rgba(255,255,255,.8);
+    }
+    .btn-outline:hover { background: #fff; color: var(--teal) !important; }
+
+    /* ============== SECTION FRAMING ============== */
+    .section { padding: 100px 0; }
+    .section.band-coral  { background: var(--coral-soft); }
+    .section.band-teal   { background: var(--teal-soft); }
+    .section.band-yellow { background: var(--yellow-soft); }
+    .section.band-sky    { background: var(--sky); }
+    .section.dark        { background: var(--bg-dark); color: rgba(255,255,255,.85); }
+    .section.dark h2, .section.dark h3, .section.dark h4 { color: #fff; }
+
+    /* ============== INTRO: Who is EFTO ============== */
+    .intro {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .intro-art {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(13,110,122,.92) 0%, rgba(232,83,62,.85) 100%),
+        radial-gradient(circle at 30% 30%, var(--yellow) 0%, transparent 50%);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-art::after {
+      content: ''; position: absolute; inset: 20px;
+      border: 2px dashed rgba(255,255,255,.3);
+      border-radius: var(--radius);
+    }
+    .intro-art-label {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      color: #fff; font-family: 'Plus Jakarta Sans';
+      text-align: center; padding: 24px;
+    }
+    .intro-art-label .icon-row { font-size: 3rem; margin-bottom: 14px; }
+    .intro-art-label .label-text { font-weight: 600; font-size: 1.1rem; letter-spacing: .04em; }
+    @media (max-width: 900px) {
+      .intro { grid-template-columns: 1fr; }
+    }
+
+    /* ============== APPROACH (3-col cards on coral band) ============== */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .approach-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .approach-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .approach-card .card-icon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--coral), var(--coral-deep));
+      color: #fff; font-size: 1.8rem;
+      margin-bottom: 22px;
+    }
+    .approach-card:nth-child(2) .card-icon { background: linear-gradient(135deg, var(--teal), var(--teal-deep)); }
+    .approach-card:nth-child(3) .card-icon { background: linear-gradient(135deg, var(--yellow), var(--yellow-deep)); color: var(--ink); }
+    .approach-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    .approach-card p  { font-size: 0.97rem; margin: 0; color: var(--ink-soft); }
+    @media (max-width: 880px) {
+      .approach-grid { grid-template-columns: 1fr; gap: 18px; }
+    }
+
+    /* ============== WHY WE DO IT (image + text) ============== */
+    .why {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .why-art {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(160deg, var(--yellow) 0%, var(--coral) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .why-art::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 25% 30%, rgba(255,255,255,.4) 0%, transparent 30%),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,.25) 0%, transparent 35%);
+    }
+    .why-art-label {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: 'Plus Jakarta Sans';
+      font-size: 4rem; font-weight: 800;
+      text-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+    @media (max-width: 900px) {
+      .why { grid-template-columns: 1fr; }
+      .why-art { order: -1; }
+    }
+
+    /* ============== HOW YOU CAN HELP (3-col CTA cards) ============== */
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .help-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 36px 28px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      display: flex; flex-direction: column;
+      transition: all .2s;
+    }
+    .help-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--coral); }
+    .help-card h3 {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--coral);
+      letter-spacing: .04em;
+      margin-bottom: 16px;
+    }
+    .help-card p { flex: 1; font-size: 0.97rem; color: var(--ink-soft); margin-bottom: 22px; }
+    .help-card .btn { align-self: center; }
+    @media (max-width: 880px) {
+      .help-grid { grid-template-columns: 1fr; gap: 18px; }
+    }
+
+    /* ============== BRIDGING BAND (yellow / coral) ============== */
+    .bridging {
+      padding: 70px 24px;
+      background: var(--coral-soft);
+      text-align: center;
+      position: relative;
+    }
+    .bridging-content {
+      max-width: 850px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 30px;
+      flex-wrap: wrap;
+    }
+    .bridging-text {
+      flex: 1; min-width: 320px;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+      color: var(--ink);
+      line-height: 1.35;
+      text-align: left;
+    }
+    .bridging-text em { color: var(--coral); }
+    .bridging-cta {
+      display: flex; gap: 10px; flex-direction: column;
+    }
+    .bridging-cta .btn { min-width: 140px; }
+
+    /* ============== WAYS TO SUPPORT (2-col photo cards) ============== */
+    .ways-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .way-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .way-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .way-card .way-header {
+      padding: 18px 24px;
+      background: var(--teal);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .way-card:nth-child(2) .way-header { background: var(--coral); }
+    .way-card .way-art {
+      aspect-ratio: 16/9;
+      background:
+        linear-gradient(180deg, rgba(13,110,122,.6) 0%, rgba(232,83,62,.5) 100%),
+        radial-gradient(circle at 30% 40%, var(--yellow), transparent 50%);
+    }
+    .way-card:nth-child(2) .way-art {
+      background:
+        linear-gradient(180deg, rgba(232,83,62,.6) 0%, rgba(13,110,122,.5) 100%),
+        radial-gradient(circle at 70% 50%, var(--yellow), transparent 50%);
+    }
+    .way-card .way-body {
+      padding: 22px 24px 26px;
+    }
+    .way-card .way-body p { font-size: 0.97rem; margin-bottom: 16px; }
+    @media (max-width: 760px) {
+      .ways-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============== HELP CTA BAND (teal) ============== */
+    .help-band {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .help-band h2 { color: #fff; }
+    .help-band p {
+      color: rgba(255,255,255,.9);
+      max-width: 580px;
+      margin: 0 auto 30px;
+    }
+
+    /* ============== TESTIMONIALS ============== */
+    .testimonials { padding: 100px 0 80px; }
+    .testimonial-quote {
+      max-width: 720px;
+      margin: 30px auto 0;
+      text-align: center;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 600;
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      line-height: 1.5;
+      color: var(--ink);
+      font-style: italic;
+    }
+    .testimonial-author {
+      margin-top: 24px;
+      color: var(--coral);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: .04em;
+      font-style: normal;
+    }
+    .thanks {
+      text-align: center;
+      margin-top: 70px;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--coral);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* ============== FUNDERS STRIP ============== */
+    .funder-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .funder-strip .funder-pill {
+      padding: 22px 24px;
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      text-align: center;
+      transition: all .2s;
+    }
+    .funder-strip .funder-pill:hover { border-color: var(--coral); transform: translateY(-2px); }
+    .funder-strip h4 {
+      font-size: 1rem; color: var(--teal); margin: 0 0 4px;
+    }
+    .funder-strip span {
+      font-size: 0.8rem; color: var(--muted);
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    @media (max-width: 760px) { .funder-strip { grid-template-columns: 1fr; } }
+
+    /* ============== NEWSLETTER DARK BAND ============== */
+    .newsletter {
+      padding: 70px 24px;
+      background: var(--bg-dark);
+      color: rgba(255,255,255,.9);
+      text-align: center;
+    }
+    .newsletter .micro-eyebrow {
+      color: var(--coral);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .newsletter h2 {
+      color: #fff;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin-bottom: 28px;
+    }
+    .newsletter form {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      max-width: 620px; margin: 0 auto;
+      justify-content: center;
+    }
+    .newsletter input {
+      flex: 1; min-width: 200px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      color: #fff; font-size: 1rem;
+      font-family: inherit;
+    }
+    .newsletter input::placeholder { color: rgba(255,255,255,.5); }
+    .newsletter input:focus { outline: none; border-color: var(--coral); }
+
+    /* ============== FOOTER ============== */
+    footer.site {
+      background: #14181d;
+      color: rgba(255,255,255,.65);
+      padding: 60px 0 32px;
+      font-size: 0.93rem;
+    }
+    .foot-top {
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      gap: 18px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .foot-top img { height: 80px; }
+    .foot-links {
+      display: flex; gap: 26px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 24px;
+    }
+    .foot-links a { color: rgba(255,255,255,.75); font-size: 0.93rem; }
+    .foot-links a:hover { color: var(--yellow); }
+    .foot-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 11px 20px;
+      background: var(--coral); color: #fff !important;
+      border-radius: 8px;
+      font-weight: 700; font-size: 0.93rem;
+    }
+    .foot-cta:hover { background: var(--coral-deep); color: #fff !important; }
+    .foot-social {
+      display: flex; gap: 8px; justify-content: center;
+      margin-bottom: 24px;
+    }
+    .foot-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.08); color: #fff;
+      font-size: 0.85rem; font-weight: 700;
+    }
+    .foot-social a:hover { background: var(--coral); }
+    .foot-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 22px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,.45);
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site">
+  <div class="container nav">
+    <a href="#" class="brand" aria-label="Engineers For Tomorrow Outreach home">
+      <img src="/assets/logo.svg" alt="Engineers For Tomorrow Outreach" />
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="#mission">About</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#help">Get Involved</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a class="fb" href="#" aria-label="Facebook">f</a>
+      <a class="x"  href="#" aria-label="X">𝕏</a>
+      <a class="ig" href="#" aria-label="Instagram">◎</a>
+      <a class="yt" href="#" aria-label="YouTube">▶</a>
+      <a class="li" href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow"><span class="dot"></span>U.S. Virgin Islands · Since 2018</span>
+    <h1>Welcome to <span class="script">Engineers For Tomorrow</span></h1>
+    <p class="hero-lead">
+      Free, hands-on engineering workshops for Virgin Islands students ages 8–13 —
+      robotics, circuits, solar cars, bridges, and AI. Because engineering is creative,
+      collaborative, and open to everyone.
+    </p>
+    <div class="cta-row">
+      <a href="#help" class="btn btn-coral">Get Involved</a>
+      <a href="#approach" class="btn btn-outline">Our Approach</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     INTRO: Who is EFTO?
+     ========================================================= -->
+<section class="section" id="mission">
+  <div class="container intro">
+    <div>
+      <span class="eyebrow">Hello there!</span>
+      <h2>Who is Engineers For Tomorrow Outreach?</h2>
+      <p class="lead">
+        Engineers For Tomorrow Outreach (EFTO) is a U.S. Virgin Islands 501(c)(3) nonprofit
+        founded in 2018 to spark an early love of engineering in local students.
+      </p>
+      <p>
+        We deliver free, hands-on workshops in <strong>robotics, circuits, solar cars,
+        bridges, and AI</strong> directly to schools, after-school programs, sororities,
+        and youth organizations across <strong>St. Thomas and St. Croix</strong> — because
+        when a student wires their first circuit or programs their first robot, the question
+        stops being <em>"can I be an engineer?"</em> and becomes <em>"what kind?"</em>
+      </p>
+      <p>
+        Every workshop is free, funded by community grants, and led by working engineers
+        who look like the students they're inspiring.
+      </p>
+    </div>
+    <div class="intro-art" aria-hidden="true">
+      <div class="intro-art-label">
+        <div class="icon-row">🔌&nbsp;🤖&nbsp;☀️</div>
+        <div class="label-text">Hands-on STEM<br/>across the U.S. Virgin Islands</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     OUR APPROACH (CORAL band — 3 cards)
+     ========================================================= -->
+<section class="section band-coral" id="approach">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">What sets us apart</span>
+      <h2>Our Approach</h2>
+      <p class="lead narrow">
+        Three principles guide every workshop we run on St. Thomas, St. Croix and St. John.
+      </p>
+    </div>
+
+    <div class="approach-grid">
+      <article class="approach-card">
+        <div class="card-icon" aria-hidden="true">🌱</div>
+        <h3>Grass-roots</h3>
+        <p>We bring engineering directly into the schools, churches, sororities, and youth
+        programs students already trust — rather than asking families to come find us.</p>
+      </article>
+
+      <article class="approach-card">
+        <div class="card-icon" aria-hidden="true">🧩</div>
+        <h3>Systemic</h3>
+        <p>One-day events spark interest. Year-round programming — circuits, robotics, bridges,
+        AI — builds the kind of curiosity that survives middle school and beyond.</p>
+      </article>
+
+      <article class="approach-card">
+        <div class="card-icon" aria-hidden="true">⚡</div>
+        <h3>Hands-on First</h3>
+        <p>Students design, build, test, and iterate something real every session — because
+        engineering is a verb, not a vocabulary list.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     WHY WE DO IT
+     ========================================================= -->
+<section class="section">
+  <div class="container why">
+    <div class="why-art" aria-hidden="true">
+      <div class="why-art-label">🌉</div>
+    </div>
+    <div>
+      <span class="eyebrow">Why we do it</span>
+      <h2>The next Caribbean engineer is sitting in a Virgin Islands classroom right now.</h2>
+      <p>
+        She just doesn't know it yet. Maybe she's never met an engineer who looks like her.
+        Maybe she's never wired a circuit, programmed a robot, or watched her own solar car
+        outpace the kid next to her.
+      </p>
+      <p>
+        Engineers For Tomorrow Outreach exists to close that gap — to put the tools, the
+        mentors, and the spark in front of every Virgin Islands student, free of charge. We
+        honor pioneers like <strong>Elijah McCoy</strong>, the Black mechanical engineer whose
+        automatic lubrication systems gave us the phrase <em>"the real McCoy"</em> — and we
+        pair their stories with builds that let every student feel that legacy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     HOW YOU CAN HELP (3-col CTA cards)
+     ========================================================= -->
+<section class="section band-yellow" id="help">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Three ways to help</span>
+      <h2>How you can help</h2>
+      <p class="lead narrow">
+        Every workshop, every kit, every solar car race depends on people like you.
+      </p>
+    </div>
+
+    <div class="help-grid">
+      <article class="help-card">
+        <h3>EDUCATORS</h3>
+        <p>Principals, teachers, after-school coordinators — invite EFTO to deliver a
+        hands-on engineering session at your school or program. All programs are free.</p>
+        <a href="#contact" class="btn btn-coral">Request a workshop</a>
+      </article>
+
+      <article class="help-card">
+        <h3>VOLUNTEERS</h3>
+        <p>Working engineers, college STEM students, and skilled volunteers — share an hour
+        with the next generation. We'll pair you with the right age group and project.</p>
+        <a href="#contact" class="btn btn-coral">Volunteer with us</a>
+      </article>
+
+      <article class="help-card">
+        <h3>SPONSORS</h3>
+        <p>Kits, materials, and travel between islands cost real money. Sponsor a workshop,
+        fund a Engineers Week cohort, or underwrite our annual aviation program.</p>
+        <a href="#contact" class="btn btn-coral">Become a sponsor</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     BRIDGING BAND (coral soft)
+     ========================================================= -->
+<div class="bridging">
+  <div class="bridging-content">
+    <div class="bridging-text">
+      Bridging the gap between the real world and classroom theory — and making it <em>FUN!</em>
+    </div>
+    <div class="bridging-cta">
+      <a href="#contact" class="btn btn-teal">Donate</a>
+      <a href="#contact" class="btn btn-teal">Volunteer</a>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     WAYS TO SUPPORT (2-col photo cards)
+     ========================================================= -->
+<section class="section" id="support">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Make an impact</span>
+      <h2>Ways to support</h2>
+    </div>
+
+    <div class="ways-grid">
+      <article class="way-card">
+        <div class="way-header">Give a gift</div>
+        <div class="way-art" aria-hidden="true"></div>
+        <div class="way-body">
+          <p>Help support Virgin Islands kids' STEM education by donating to Engineers For
+          Tomorrow Outreach. Every dollar buys kits, builds bridges, and lights up
+          a circuit for a student who needed it.</p>
+          <a href="#contact" class="btn btn-coral">Donate Today</a>
+        </div>
+      </article>
+
+      <article class="way-card">
+        <div class="way-header">Join us</div>
+        <div class="way-art" aria-hidden="true"></div>
+        <div class="way-body">
+          <p>Be part of something big. Our sponsors are thought leaders in their fields who
+          want to make a difference for the next generation of Virgin Islands engineers.</p>
+          <a href="#contact" class="btn btn-coral">Become a Sponsor</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     HELP CTA BAND (teal)
+     ========================================================= -->
+<section class="help-band">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--yellow);">We need your help!</span>
+    <h2>Are you passionate about engineering?</h2>
+    <p>
+      Want to share your story and become an engineering ambassador? Want to smash
+      stereotypes and get kids curious about engineering?
+    </p>
+    <a href="#contact" class="btn btn-yellow">Become a Volunteer</a>
+  </div>
+</section>
+
+<!-- =========================================================
+     PARTNERS / FUNDERS
+     ========================================================= -->
+<section class="section band-teal" id="partners">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Supported by</span>
+      <h2>Trusted institutions stand with us.</h2>
+      <p class="lead narrow">
+        Every EFTO workshop is free because of the funders below — and we deliver in
+        partnership with the institutions students already know and trust.
+      </p>
+    </div>
+
+    <div class="funder-strip">
+      <div class="funder-pill">
+        <h4>Community Foundation of the Virgin Islands</h4>
+        <span>Local Foundation</span>
+      </div>
+      <div class="funder-pill">
+        <h4>Community Development Block Grant</h4>
+        <span>Federal Grant Program</span>
+      </div>
+      <div class="funder-pill">
+        <h4>Rotary Club of St. Thomas II</h4>
+        <span>Service Partner</span>
+      </div>
+    </div>
+
+    <div class="funder-strip" style="margin-top: 16px;">
+      <div class="funder-pill">
+        <h4>Joseph Sibilly Elementary School</h4>
+        <span>School Partner · St. Thomas</span>
+      </div>
+      <div class="funder-pill">
+        <h4>Wesley Methodist After-School</h4>
+        <span>Programming Partner</span>
+      </div>
+      <div class="funder-pill">
+        <h4>Delta Sigma Theta · Y-Teens V.I.</h4>
+        <span>Community Network</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS
+     ========================================================= -->
+<section class="testimonials">
+  <div class="container text-center">
+    <span class="eyebrow">Testimonials</span>
+    <div class="testimonial-quote">
+      "These activities strive to show our students that engineering is creative,
+      collaborative — and most importantly, open to everyone."
+      <div class="testimonial-author">— Lena Steele Williams, Director</div>
+    </div>
+
+    <div class="thanks">Thank you to our generous supporters</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     NEWSLETTER (DARK)
+     ========================================================= -->
+<section class="newsletter" id="contact">
+  <div class="container">
+    <div class="micro-eyebrow">See what we're getting up to</div>
+    <h2>Get in touch with EFTO</h2>
+    <p style="max-width: 580px; margin: 0 auto 22px; color: rgba(255,255,255,.7);">
+      Booking a workshop, exploring a partnership, or just have a question? Drop us a line.
+    </p>
+    <p style="font-size: 1.05rem; color: #fff;">
+      <strong style="color: var(--yellow);">Email:</strong>
+      <a href="mailto:gail.steele@engineersfortomorrow.org" style="color: #fff;">gail.steele@engineersfortomorrow.org</a><br/>
+      <strong style="color: var(--yellow);">Phone:</strong>
+      <a href="tel:+13406431495" style="color: #fff;">(340) 643-1495</a><br/>
+      <strong style="color: var(--yellow);">Mail:</strong>
+      PO Box 305814, St. Thomas, USVI 00803
+    </p>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site">
+  <div class="container">
+    <div class="foot-top">
+      <img src="/assets/logo.svg" alt="EFTO" style="filter: brightness(0) invert(1);" />
+      <div class="foot-links">
+        <a href="#mission">About Us</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#help">Ways to Support</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="foot-cta">Book a Workshop →</a>
+    </div>
+
+    <div class="foot-social">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="X">𝕏</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+
+    <div class="foot-bottom">
+      © 2026 Engineers For Tomorrow Outreach · 501(c)(3) Tax-Exempt · EIN 66-0874579 · St. Thomas, U.S. Virgin Islands
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
