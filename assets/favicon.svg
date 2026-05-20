@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#0d6e7a"/>
-  <!-- friendly "T" monogram with spark dot -->
-  <text x="16" y="22"
-        font-family="'Plus Jakarta Sans', sans-serif"
-        font-weight="800"
-        font-size="22"
-        text-anchor="middle"
-        fill="#fbb13c">T</text>
-  <!-- spark dot above T -->
-  <circle cx="22" cy="9" r="2.6" fill="#e8533e"/>
-  <circle cx="22" cy="9" r="1.2" fill="#fff"/>
+  <rect width="32" height="32" rx="7" fill="#0f2849"/>
+  <polygon points="16,5 25,10.5 25,21.5 16,27 7,21.5 7,10.5"
+           fill="none" stroke="#b87333" stroke-width="1.6" stroke-linejoin="round"/>
+  <g fill="#b87333">
+    <rect x="12" y="11"   width="2.2" height="10" rx="0.6"/>
+    <rect x="12" y="11"   width="6.2" height="2.2" rx="0.6"/>
+    <rect x="12" y="14.9" width="5"   height="2.2" rx="0.6"/>
+    <rect x="12" y="18.8" width="6.2" height="2.2" rx="0.6"/>
+  </g>
+  <path d="M 20 13 L 23.6 16 L 20 19 Z" fill="#fff"/>
 </svg>
